@@ -1,0 +1,180 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+body{
+    margin: 0;
+    background-image:url(../AGT-img/font.jpg);
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+main{
+    width: 100%;
+    padding: 20px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.contenedor__todo{
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    position: relative;
+}
+
+.caja__trasera{
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(2px);
+    border-radius: 20px;
+    background-image: radial-gradient(circle at 109.54% 50%, #ffff78 0, #fbff7b 7.14%, #e5ff7e 14.29%, #cfff83 21.43%, #b7f987 28.57%, #9ef18c 35.71%, #85e58f 42.86%, #6cd890 50%, #54ca91 57.14%, #3bbe92 64.29%, #20b493 71.43%, #00ab95 78.57%, #00a497 85.71%, #009e9b 92.86%, #009a9f 100%);
+}
+
+.caja__trasera div{
+    margin: 100px 40px;
+    color: rgb(180, 39, 39);
+    transition: all 500ms;
+    
+}
+
+
+.caja__trasera div p,
+.caja__trasera button{
+    margin-top: 30px;
+}
+
+.caja__trasera div h3{
+    font-weight: 400;
+    font-size: 26px;
+}
+
+.caja__trasera div p{
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.caja__trasera button{
+    padding: 10px 40px;
+    border: 2px solid rgba(0, 0, 0, 0.484);
+    font-size: 14px;
+    background: transparent;
+    font-weight: 600;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.774);
+    outline: none;
+    transition: all 300ms;
+}
+
+.caja__trasera button:hover{
+    background: rgba(30, 32, 33, 0.511);
+    color: #000000;
+}
+
+/*Formularios*/
+
+.contenedor__login-register{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 380px;
+    position: relative;
+    top: -185px;
+    left: 10px;
+
+    /*La transicion va despues del codigo JS*/
+    transition: left 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
+}
+
+.contenedor__login-register form{
+    width: 100%;
+    padding: 80px 20px;
+    position: absolute;
+    backdrop-filter: blur(1px);
+    border-radius: 20px;
+    background-image: radial-gradient(circle at 108.64% 39.66%, #ffa57d 0, #ffaa74 3.85%, #ffaf6b 7.69%, #fdb464 11.54%, #f2b95f 15.38%, #e6be5c 19.23%, #dac25c 23.08%, #cdc65d 26.92%, #bfca61 30.77%, #b0ce67 34.62%, #a1d16f 38.46%, #91d479 42.31%, #7fd684 46.15%, #6cd890 50%, #55da9d 53.85%, #37dbab 57.69%, #00dcb9 61.54%, #00dcc7 65.38%, #00dcd5 69.23%, #00dce2 73.08%, #00dbef 76.92%, #00dafb 80.77%, #00d9ff 84.62%, #00d7ff 88.46%, #00d5ff 92.31%, #00d2ff 96.15%, #14cfff 100%);
+}
+
+.contenedor__login-register form h2{
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+.contenedor__login-register form input{
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    background: #F2F2F2;
+    font-size: 16px;
+    outline: none;
+}
+
+.contenedor__login-register form button{
+    padding: 10px 40px;
+    margin-top: 40px;
+    border: none;
+    font-size: 14px;
+    background: #46A2FD;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    outline: none;
+}
+
+
+
+
+.formulario__login{
+    opacity: 1;
+    display: block;
+}
+.formulario__register{
+    display: none;
+}
+
+
+
+@media screen and (max-width: 850px){
+
+    main{
+        margin-top: 50px;
+    }
+
+    .caja__trasera{
+        max-width: 350px;
+        height: 300px;
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .caja__trasera div{
+        margin: 0px;
+        position: absolute;
+    }
+
+
+    /*Formularios*/
+
+    .contenedor__login-register{
+        top: -10px;
+        left: -5px;
+        margin: auto;
+    }
+
+    .contenedor__login-register form{
+        position: relative;
+    }
+}

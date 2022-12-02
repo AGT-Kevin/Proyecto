@@ -1,0 +1,219 @@
+
+<!DOCTYPE html>
+<html lang="es"><?php
+session_start();
+
+if(!isset($_SESSION['usuario'])){
+    echo '
+<script>
+alert("por favor inicia secion");
+window.location:"Inicio.php";
+</script>
+';
+header("location:AGT-Principal.php");
+session_destroy();
+die();
+}
+?>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú despegable</title>
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css'>
+   <link rel='stylesheet' href='https://static.fontawesome.com/css/fontawesome-app.css'>
+   <link rel='stylesheet' href='https://pro.fontawesome.com/releases/v5.2.0/css/all.css'>
+   <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:400,700'>
+   <link rel="stylesheet" href="css/slaidergallery.css">
+</head>
+<body>
+
+<!---------------------------------- Apartado de la galleria------------------------------------------------->
+<section class="ui">
+<div class="options">
+      <div class="option active" style="--optionBackground:url(../AGT-img/bg3.jpg);">
+         <div class="shadow"></div>
+         <div class="label">
+            <div class="icon">
+               <img src="iconos/inicio.png" />
+            </div>
+            <div class="info">
+               <div class="main">Poco x3 pro</div>
+               <div class="sub">Añadir al carrito</div>
+            </div>
+         </div>
+      </div>
+      <div class="option" style="--optionBackground:url(../AGT-img/fondo2.jpg);">
+         <div class="shadow"></div>
+         <div class="label">
+            <div class="icon">
+               <img src="iconos/inicio.png" />
+            </div>
+            <div class="info">
+               <div class="main">Eleven</div>
+               <div class="sub">O meu herói é o meu pai.</div>
+            </div>
+         </div>
+      </div>
+      <div class="option" style="--optionBackground:url(../AGT-img/samsung.jpg);">
+         <div class="shadow"></div>
+         <div class="label">
+            <div class="icon">
+               <img src="iconos/inicio.png" />
+            </div>
+            <div class="info">
+               <div class="main">Hopper</div>
+               <div class="sub">Manhãs são para café e contemplação</div>
+            </div>
+         </div>
+      </div>
+      <div class="option" style="--optionBackground:url(../AGT-img/redmi.jpeg);">
+         <div class="shadow"></div>
+         <div class="label">
+            <div class="icon">
+               <img src="iconos/inicio.png" />
+            </div>
+            <div class="info">
+               <div class="main">Eddie</div>
+               <div class="sub">Bem-vinda ao Hellfire.</div>
+            </div>
+         </div>
+      </div>
+      <div class="option" style="--optionBackground:url(../AGT-img/varios.jpg);">
+         <div class="shadow"></div>
+         <div class="label">
+            <div class="icon">
+               <img src="iconos/inicio.png" />
+            </div>
+            <div class="info">
+               <div class="main">Dustin</div>
+               <div class="sub">Badda Badda BOOM!</div>
+            </div>
+         </div>
+      </div>
+      <div class="option" style="--optionBackground:url(../AGT-img/001.jpg);">
+         <div class="shadow"></div>
+         <div class="label">
+            <div class="icon">
+               <img src="iconos/inicio.png" />
+            </div>
+            <div class="info">
+               <div class="main">Dustin</div>
+               <div class="sub">Badda Badda BOOM!</div>
+            </div>
+         </div>
+      </div>
+      <div class="option" style="--optionBackground:url(../AGT-img/003.jpeg);">
+         <div class="shadow"></div>
+         <div class="label">
+            <div class="icon">
+               <img src="iconos/inicio.png" />
+            </div>
+            <div class="info">
+               <div class="main">Dustin</div>
+               <div class="sub">Badda Badda BOOM!</div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+   <script src="js/slaider.js"></script>  
+   </section>
+<!--------------------------------------apartado del menu latera-------------------------------------------->
+    <nav class="nav">
+    
+
+        <ul class="list">
+<div class="logimg">
+<img src="AGT-img/bg3.jpg" alt="">
+</div>
+        <div class="content1">
+            <div class="logo">
+            <h2>Proyecto Inprovisado</h2>
+                <p>Bienvenidos a este proyecto en dessarrolo</p>
+                </div>
+            </div>
+            <li class="list__item">
+                <div class="list__button">
+                    <img src="iconos/inicio.png" class="list__img">
+                    <a href="Inicio.php" class="nav__link">Inicio</a>
+                </div>
+            </li>
+
+            <li class="list__item list__item--click">
+                <div class="list__button list__button--click">
+                    <img src="iconos/MV.png" class="list__img">
+                    <a href="#" class="nav__link">Nosotros</a>
+                    <img src="iconos/flecha.png " class="list__arrow">
+                </div>
+
+                <ul class="list__show">
+                    <li class="list__inside">
+                        <a href="mision.php" class="nav__link nav__link--inside">Mision</a>
+                    </li>
+
+                    <li class="list__inside">
+                        <a href="Vision.php" class="nav__link nav__link--inside">Vision</a>
+                    </li>
+                </ul>
+
+            </li>
+
+
+            <li class="list__item">
+                <div class="list__button">
+                    <img src="iconos/Galeria.png" class="list__img">
+                    <a href="Galeria.php" class="nav__link">Galeria</a>
+                </div>
+            </li>
+
+            <li class="list__item list__item--click">
+                <div class="list__button list__button--click">
+                    <img src="iconos/servicios.png " class="list__img">
+                    <a href="#" class="nav__link">Te ofresemos</a>
+                    <img src="iconos/flecha.png " class="list__arrow">
+                </div>
+
+                <ul class="list__show">
+                    <li class="list__inside">
+                        <a href="#" class="nav__link nav__link--inside">Estoy dentro</a>
+                    </li>
+
+                    <li class="list__inside">
+                        <a href="#" class="nav__link nav__link--inside">Estoy dentro</a>
+                    </li>
+
+                    <li class="list__inside">
+                        <a href="#" class="nav__link nav__link--inside">Estoy dentro</a>
+                    </li>
+                </ul>
+
+            </li>
+
+
+            <li class="list__item">
+                <div class="list__button">
+                    <img src="iconos/contacto.png " class="list__img">
+                    <a href="#" class="nav__link">Contacto</a>
+                </div>
+            </li>
+
+            <li class="list__item">
+                <div class="list__button">
+                    <img src="iconos/cerrar.png " class="list__img">
+                    <a href="php/cerrar.php" class="nav__link">Cerrar Sesion</a>
+                </div>
+            </li>
+
+        </ul>
+    </nav>
+  
+    <script src="js/script.js"></script>
+
+
+</body>
+</html>
+
+
+    
