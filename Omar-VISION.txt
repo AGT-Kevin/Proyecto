@@ -1,0 +1,113 @@
+<?php
+session_start();
+
+if(!isset($_SESSION['usuario'])){
+    echo '
+<script>
+alert("por favor inicia secion");
+window.location:"Inicio.php";
+</script>
+';
+header("location:AGT-Principal.php");
+session_destroy();
+die();
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/mision.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <nav class="nav">
+    
+
+        <ul class="list">
+        <div class="logo0">
+                <h2>Proyecto Inprovisado - vision</h2>
+                <p>Bienvenidos a este proyecto en dessarrolo</p>
+                </div>
+            <li class="list__item">
+                <div class="list__button">
+                    <img src="iconos/inicio.png" class="list__img">
+                    <a href="Inicio.php" class="nav__link">Inicio</a>
+                </div>
+            </li>
+
+            <li class="list_item list_item--click">
+                <div class="list_button list_button--click">
+                    <img src="iconos/MV.png" class="list__img">
+                    <a href="#" class="nav__link">Nosotros</a>
+                    <img src="iconos/flecha.png " class="list__arrow">
+                </div>
+
+                <ul class="list__show">
+                    <li class="list__inside">
+                        <a href="Mision.php" class="nav_link nav_link--inside">Mision</a>
+                    </li>
+
+                    <li class="list__inside">
+                        <a href="vision.php" class="nav_link nav_link--inside">Vision</a>
+                    </li>
+                </ul>
+
+            </li>
+
+
+            <li class="list__item">
+                <div class="list__button">
+                    <img src="iconos/Galeria.png" class="list__img">
+                    <a href="Galeria.php" class="nav__link">Galeria</a>
+                </div>
+            </li>
+
+            <li class="list_item list_item--click">
+                <div class="list_button list_button--click">
+                    <img src="iconos/servicios.png " class="list__img">
+                    <a href="#" class="nav__link">Te ofresemos</a>
+                    <img src="iconos/flecha.png " class="list__arrow">
+                </div>
+
+                <ul class="list__show">
+                    <li class="list__inside">
+                        <a href="#" class="nav_link nav_link--inside">Estoy dentro</a>
+                    </li>
+
+                    <li class="list__inside">
+                        <a href="#" class="nav_link nav_link--inside">Estoy dentro</a>
+                    </li>
+
+                    <li class="list__inside">
+                        <a href="#" class="nav_link nav_link--inside">Estoy dentro</a>
+                    </li>
+                </ul>
+
+            </li>
+
+
+            <li class="list__item">
+                <div class="list__button">
+                    <img src="iconos/contacto.png " class="list__img">
+                    <a href="#" class="nav__link">Contacto</a>
+                </div>
+            </li>
+
+            <li class="list__item">
+                <div class="list__button">
+                    <img src="iconos/cerrar.png " class="list__img">
+                    <a href="php/cerrar.php" class="nav__link">Cerrar Sesion</a>
+                </div>
+            </li>
+
+        </ul>
+    </nav>
+  
+    <script src="js/vision.js"></script>
+</body>
+</html>
